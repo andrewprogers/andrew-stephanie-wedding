@@ -1,0 +1,9 @@
+#!/bin/bash
+yarn build
+rm -r docs
+mv build docs
+touch docs/CNAME
+echo www.andrew-stephanie.com >> docs/CNAME
+git add .
+git commit -m publish-wedding-site
+git push --force
