@@ -1,0 +1,256 @@
+@import '~bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css?family=Handlee');
+
+// variable overrides
+// $theme-colors: (
+//   "primary":    ..,
+//   "secondary":  ..,
+//   "success":    ..,
+//   "info":       ..,
+//   "warning":    ..,
+//   "danger":     ..,
+//   "light":      ..,
+//   "dark":       ..
+// );
+
+$primary: #738A5C;
+$primary-light: #ABBA9A;
+$highlight: #ECCAB8;
+$accent: #CD6E3D;
+$accent-strong: #631C1D;
+
+
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Handlee';
+}
+
+div.App {
+  height: 100%;
+}
+
+div.App {
+  // background: url("./photos/splashPage.jpg");
+
+  @media screen and (min-width: 721px) and (orientation: landscape){
+    background: url("./photos/splashPageLarge.jpg");
+  }
+
+  @media screen and (max-width: 720px) and (orientation: landscape){
+    background: url("./photos/splashPageSmall.jpg");
+  }
+
+  @media screen and (min-height: 541px) and (orientation: portrait){
+    background: url("./photos/splashPageLarge.jpg");
+  }
+
+  @media screen and (max-height: 540px) and (orientation: portrait){
+    background: url("./photos/splashPageSmall.jpg");
+  }
+
+  @media all and (orientation: landscape) {
+    background-size: cover;
+    background-position-x: 50%;
+  }
+
+  @media all and (orientation: portrait) {
+    background-size: auto 100%;
+    background-position-x: 50%;
+  }
+}
+
+.photoCover {
+  background-color: rgba(0, 0, 0, 0.3);
+  @include media-breakpoint-up(md) { height: 100%;}
+  height: 80%;
+}
+
+#mainContainer {
+  padding-right: 0px;
+  padding-left: 0px;
+  height: 100%;
+}
+
+#mainRow {
+  height: 100%;
+}
+
+.heightCol {
+  height: 100%;
+}
+
+#ImagePanel {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  div {
+    height: 100%;
+    width: 100%;
+
+    opacity: 1;
+    transition: opacity 1s linear;
+    transition-delay: 1s;
+
+    &.hidden {
+      opacity: 0;
+      transition-delay: 0s;
+    }
+
+    img {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+
+      &.front {
+        z-index: 1;
+      }
+
+      &.rear {
+        z-index: 0;
+      }
+    }
+  }
+}
+
+.Announcement {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  color: rgba(255, 255, 255,0.7);
+  padding-top: 20px;
+  padding-left: 20px;
+  z-index: 10;
+
+  .name {
+    color: $highlight;
+  }
+
+  h1 {
+    @media screen and (orientation: landscape) {
+      font-size: 64px;
+    }
+
+    @media screen and (orientation: portrait) {
+      font-size: 50px;
+    }
+  }
+}
+
+#Sidebar {
+  background-color: $primary-light;
+  width: 100%;
+  min-height: 100%;
+  padding: 30px;
+  box-shadow: -2px 0px 5px 1px #555;
+  z-index: 2;
+
+  position: relative;
+  left: 0%;
+  top: 0%;
+
+  @include media-breakpoint-up(md) { 
+    overflow-y: scroll;
+    height: 100%;
+    transition: left 1.0s 0s;
+    
+  
+    &.hidden {
+      box-shadow: 0px 0px 0px 0px #555;
+      transition-delay: 1s;
+      left: 100%;
+      top: 0%;
+      //padding: 0px;
+    }
+  }
+}
+
+#SidebarMenu {
+  font-size: 23px;
+  @include media-breakpoint-up(md) { font-size: 25px;}
+  @include media-breakpoint-up(xl) { font-size: 30px;}
+
+
+  span {
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 0px 10px;
+    border-bottom: 3px solid rgba($accent-strong, 0.1);
+
+    &.selected {
+      font-weight: bold;
+      border-bottom: 3px solid rgba($accent, 0.99);
+      transition: border-bottom 1s;
+    }
+  }
+}
+
+#sidebarContainer {
+  height: 100%;
+  width: 100%;
+
+  &.sidebarHidden {
+    @include media-breakpoint-up(md) { 
+      width: 0%; 
+      overflow-x: hidden;
+    }
+  }
+}
+
+#SidebarContent {
+  background-color: rgba($primary, 0.7);
+  box-shadow: -3px 3px 10px 0px #555;
+  padding: 20px 0px;
+}
+
+.mapContainer {
+  padding: 10px;
+}
+
+#map {
+  text-align: left;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+}
+
+#Rsvp {
+  padding: 0px 10px;
+  text-align: left;
+
+  label {
+    font-size: 1.3rem;
+    color: black;
+  }
+
+  small {
+    font-size: 0.85rem;
+    color: black;
+  }
+}
+
+.attendingDependent {
+  &.hidden {
+    display: none
+  }
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.btn.btn-primary  {
+  background-color: $accent;
+  border-color: $accent;
+
+  &:hover {
+    background-color: $accent-strong;
+    border-color: $accent-strong;
+  }
+}
