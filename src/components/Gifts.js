@@ -7,7 +7,7 @@ class Gifts extends React.Component {
                 <h1>Wedding Gifts</h1>
 
                 <p>
-                    
+                    TBD
                 </p>
 
                 

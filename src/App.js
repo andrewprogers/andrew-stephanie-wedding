@@ -12,8 +12,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hideSidebar: false,
-      selectedPage: "Gifts"
+      hideSidebar: true,
+      selectedPage: "Details"
     }
     this.selectPage = this.selectPage.bind(this);
     this.toggleSidebar = this.toggleSidebar.bind(this);
