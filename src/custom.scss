@@ -1,6 +1,14 @@
 @import '~bootstrap/scss/bootstrap.scss';
 @import url('https://fonts.googleapis.com/css?family=Handlee');
 
+@font-face {
+  font-family: 'gartonmedium';
+  src: url('./garto16-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 // variable overrides
 // $theme-colors: (
 //   "primary":    ..,
@@ -84,6 +92,7 @@ div.App {
   position: absolute;
   height: 100%;
   width: 100%;
+  font-family: 'gartonmedium';
 
   div {
     height: 100%;
