@@ -11,6 +11,12 @@ class Details extends React.Component {
             minZoom: 9,
             maxZoom: 16
         });
+        var el = document.createElement('div');
+        el.className = 'marker';
+
+        new window.mapboxgl.Marker(el)
+            .setLngLat([-122.947400, 38.408261])
+            .addTo(map);
         console.log(map)
     }
 
