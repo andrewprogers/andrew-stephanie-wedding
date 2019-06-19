@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import details from '../photos/details.jpg'
+import details from '../photos/details.JPG'
 import gifts from '../photos/giftsLarge.jpg'
 import rsvp from '../photos/rsvp.jpg'
 import announcement from '../photos/announcement.jpg'

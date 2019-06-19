@@ -12,7 +12,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedPage: "Announcement"
+      selectedPage: "Details"
     }
     this.selectPage = this.selectPage.bind(this);
   }

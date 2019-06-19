@@ -10,17 +10,6 @@
 }
 
 
-// variable overrides
-// $theme-colors: (
-//   "primary":    ..,
-//   "secondary":  ..,
-//   "success":    ..,
-//   "info":       ..,
-//   "warning":    ..,
-//   "danger":     ..,
-//   "light":      ..,
-//   "dark":       ..
-// );
 
 $primary: rgb(255, 249, 234);
 $primary-light: #ABBA9A;
@@ -39,36 +28,6 @@ html, body, #root {
 div.App {
   height: 100%;
 }
-
-// div.App {
-//   // background: url("./photos/splashPage.jpg");
-
-//   @media screen and (min-width: 721px) and (orientation: landscape){
-//     background: url("./photos/splashPageLarge.jpg");
-//   }
-
-//   @media screen and (max-width: 720px) and (orientation: landscape){
-//     background: url("./photos/splashPageSmall.jpg");
-//   }
-
-//   @media screen and (min-height: 541px) and (orientation: portrait){
-//     background: url("./photos/splashPageLarge.jpg");
-//   }
-
-//   @media screen and (max-height: 540px) and (orientation: portrait){
-//     background: url("./photos/splashPageSmall.jpg");
-//   }
-
-//   @media all and (orientation: landscape) {
-//     background-size: cover;
-//     background-position-x: 50%;
-//   }
-
-//   @media all and (orientation: portrait) {
-//     background-size: auto 100%;
-//     background-position-x: 50%;
-//   }
-// }
 
 .photoCover {
   background-color: rgba(0, 0, 0, 0.3);
@@ -408,4 +367,21 @@ div.App {
 
 #Details {
   padding: 10px 25px;
+}
+
+.DetailItem {
+  .title {
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+
+  .item {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+  }
+
+  .description {
+    
+  }
 }
