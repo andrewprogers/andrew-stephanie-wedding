@@ -10,14 +10,20 @@ const MenuItem = ({text, selectedPage, selectPage}) => {
     )
 }
 
-const SidebarMenu = ({selectedPage, selectPage}) => {
-    return(
-        <div id="SidebarMenu">
-            <MenuItem text={"Details"} selectedPage={selectedPage} selectPage={selectPage}/>|
-            <MenuItem text={"RSVP"} selectedPage={selectedPage} selectPage={selectPage}/>|
-            <MenuItem text={"Gifts"} selectedPage={selectedPage} selectPage={selectPage}/>
-        </div>
-    )
+const SidebarMenu = ({visible, selectedPage, selectPage}) => {
+    if (visible == true) {
+        return(
+            <div id="SidebarMenu">
+                <MenuItem text={"Details"} selectedPage={selectedPage} selectPage={selectPage}/>|
+                <MenuItem text={"RSVP"} selectedPage={selectedPage} selectPage={selectPage}/>|
+                <MenuItem text={"Gifts"} selectedPage={selectedPage} selectPage={selectPage}/>|
+                <MenuItem text={"Explore"} selectedPage={selectedPage} selectPage={selectPage}/>
+            </div>
+        )
+    } else {
+        return null;
+    }
+
 }
 
 export default SidebarMenu;

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import details from '../photos/details.JPG'
+import details from '../photos/details.jpg'
 import gifts from '../photos/giftsLarge.jpg'
 import rsvp from '../photos/rsvp.jpg'
+import announcement from '../photos/announcement.jpg'
+import explore from '../photos/explore.jpg'
 
 const transitionMilliseconds = 500;
 const FPS = 60;
@@ -10,12 +12,16 @@ let transitionSteps = FPS * (transitionMilliseconds / 1000);
 const getImageSource = (page) => {
 
   switch (page) {
+    case "Announcement":
+      return announcement;
     case "Details":
       return details;
     case "RSVP":
       return rsvp;
     case "Gifts":
       return gifts;
+    case "Explore":
+      return explore;
   }
 }
 
@@ -64,16 +70,9 @@ class ImagePanel extends Component {
 
     return (
       <div id="ImagePanel">
-        <div className={(this.props.hideSidebar ? " hidden" : "")}>
+        <div>
           {imgRear}
           {imgFront}
-        </div>
-        <div className="Announcement text-left" onClick={this.props.toggleSidebar}>
-          <h1>
-            <span className="name">Stephanie</span> and
-            <br /><span className="name">Andrew</span> are
-            <br />Getting Married!
-          </h1>
         </div>
       </div>
     );

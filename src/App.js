@@ -12,20 +12,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hideSidebar: true,
-      selectedPage: "Details"
+      selectedPage: "Announcement"
     }
     this.selectPage = this.selectPage.bind(this);
-    this.toggleSidebar = this.toggleSidebar.bind(this);
-  }
-
-  toggleSidebar() {
-    console.log("here");
-    let newState = {
-      ...this.state,
-      hideSidebar: !this.state.hideSidebar
-    };
-    this.setState(newState);
   }
 
   selectPage(selectedPage) {
@@ -43,12 +32,10 @@ class App extends Component {
             <Row noGutters={true} id="mainRow">
               <Col xs={12} sm={12} md={6} lg={7} className="heightCol">
                 <ImagePanel
-                  hideSidebar={this.state.hideSidebar}
-                  toggleSidebar={this.toggleSidebar}
                   selectedPage={this.state.selectedPage}
                 />
               </Col>
-              <Sidebar hidden={this.state.hideSidebar} selectedPage={this.state.selectedPage} selectPage={this.selectPage} />
+              <Sidebar selectedPage={this.state.selectedPage} selectPage={this.selectPage} />
             </Row>
           </Container>
 

@@ -14,13 +14,17 @@ class Details extends React.Component {
     }
 
     render() {
+        let rand = Math.random();
+        let names = ["Andrew Paul Rogers", "Stephanie Rose Springer"];
+        let firstName = (rand > 0.5) ? names[0] : names[1];
+        let secondName = (rand > 0.5) ? names[1] : names[0];
         return(
-            <div id="Details">
-                <h1>You're Invited!</h1>
+            <div id="Details" className="text-left">
+                <div className="text-center">
+                    <h3 className="serifText">Just the Facts</h3>
+                </div>
                 <p>
-                    Andrew Paul Rogers
-                    &amp;
-                    Stephanie Rose Springer
+                    {firstName}&nbsp;&amp;&nbsp;{secondName}
                 </p>
                 
                 <p>
