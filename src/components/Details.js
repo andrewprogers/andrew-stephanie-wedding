@@ -46,6 +46,7 @@ class Details extends React.Component {
                     description="Please arrive between 4:00-4:45PM to allow time for shuttling everyone to the amphitheater" />
 
                 <img src={hotel} />
+                <br />
 
                 <DetailItem title="Reception" item="" 
                     description="An appetizer will be served following the ceremony before guests are shuttled back to the Hotel. A family style Italian dinner will be served at the hotel ballroom followed by cake and dancing until 10:30. Night owls are welcome to join us at the hotel bar for some after party drinks." />
