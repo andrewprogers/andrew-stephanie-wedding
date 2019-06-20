@@ -53,7 +53,7 @@ class Explore extends React.Component {
                         <a href="https://www.hookandladderwinery.com/" target="_blank" className="tripLink">Hook &amp; Ladder</a> - Mostly for the outdoor bocci court!
                     </li>
                     <li className="tripItem">
-                        <a href="https://www.chateaustjean.com/" target="_blank" className="tripLink">Chateau St Jean</a> - For the scenery and other Kenwood Wineries
+                        <a href="https://www.chateaustjean.com/" target="_blank" className="tripLink">Chateau St Jean</a> and other Kenwood Wineries - For the scenery 
                     </li>
                     <li className="tripItem">
                         <a href="https://russianriverbrewing.com/" target="_blank" className="tripLink">Russian River Brewery</a> - If Beer is more your thing!

@@ -40,7 +40,7 @@ class Gifts extends React.Component {
 
 
                 <br />
-                <p>The greatest gift will truly be getting all of our wonderful friends and family in the same area.</p>
+                <p>The best gift will truly be getting all of our wonderful friends and family together in the same place!</p>
 
                 
             </div>
